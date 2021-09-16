@@ -1,8 +1,7 @@
-import { FunctionComponent } from "react";
 import styles from "../styles/Home.module.css";
 import { ISpaceX } from "../type";
 
-const Launches: FunctionComponent<{ launch: ISpaceX }> = ({ launch }) => {
+const Launches: React.FC<{ launch: ISpaceX }> = ({ launch }) => {
   return (
     <a
       key={launch.id}

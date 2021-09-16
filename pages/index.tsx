@@ -17,7 +17,7 @@ export default function Home({ launches }: IHomeProps) {
       <main className={styles.main}>
         <h1 className={styles.title}>SpaceX Launches</h1>
         <div className={styles.grid}>
-          {launches?.map((launch: ISpaceX) => (
+          {launches.map((launch) => (
             <Launches key={launch.id} launch={launch} />
           ))}
         </div>
