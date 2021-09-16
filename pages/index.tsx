@@ -4,7 +4,11 @@ import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 import { ISpaceX } from "../type";
 import Launches from "../components/Launches";
 
-export default function Home({ launches }: { launches: ISpaceX }) {
+interface PageProps {
+  launches: ISpaceX[]
+}
+
+export default function Home({ launches }: PageProps) {
   return (
     <div className={styles.container}>
       <Head>

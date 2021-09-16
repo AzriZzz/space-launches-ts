@@ -1,5 +1,5 @@
 export interface ISpaceX {
-  [x: string]: any;
+  // [x: string]: any;
   __typename: string;
   id: string;
   launch_date_local: string;
