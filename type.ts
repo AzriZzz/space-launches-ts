@@ -1,5 +1,8 @@
+
+export interface IHomeProps {
+  launches: ISpaceX[]
+}
 export interface ISpaceX {
-  // [x: string]: any;
   __typename: string;
   id: string;
   launch_date_local: string;

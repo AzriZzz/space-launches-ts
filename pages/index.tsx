@@ -1,14 +1,11 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
-import { ISpaceX } from "../type";
+import { ISpaceX, IHomeProps } from "../type";
 import Launches from "../components/Launches";
+import { GetStaticPropsContext } from "next";
 
-interface PageProps {
-  launches: ISpaceX[]
-}
-
-export default function Home({ launches }: PageProps) {
+export default function Home({ launches }: IHomeProps) {
   return (
     <div className={styles.container}>
       <Head>
@@ -29,7 +26,7 @@ export default function Home({ launches }: PageProps) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps(context: GetStaticPropsContext) {
   const client = new ApolloClient({
     uri: "https://api.spacex.land/graphql/",
     cache: new InMemoryCache(),
