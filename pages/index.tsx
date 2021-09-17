@@ -1,7 +1,7 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
-import { ISpaceX, IHomeProps } from "../type";
+import { IHomeProps } from "../type";
 import Launches from "../components/Launches";
 import { GetStaticPropsContext } from "next";
 
